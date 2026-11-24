@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<!-- Mirrored from https://smart-iota-mocha.vercel.app/ by HTTrack Website Copier/3.x [XR&CO], Mon, 09 Nov 2026 21:47:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+		<!-- Meta -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<!-- SITE TITLE -->
+		<title> Smart- Digital Agency & Creative Portfolio HTML Template</title>
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="assets/img/logo/favicon.png" type="image/x-icon">
+		<!-- Latest Bootstrap min CSS -->
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/plugin.min.css">
+		<link rel="stylesheet" href="assets/css/theme-spacing.css">
+		<link rel="stylesheet" href="assets/fonts/all.min.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+		<link rel="stylesheet" href="assets/css/responsive.css">
+		<style>
+  #work .strength-card {
+    height: 100%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 22px 10px;
+    border-radius: 22px;
+    background: #e0eedb;
+    text-align: center;
+  }
+
+  #work .strength-icon {
+    width: 80px;
+    height: 80px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #fff;
+    color: #234b2a;
+    font-size: 36px;
+  }
+
+  #work .strength-card h3 {
+    margin: 0;
+    color: #193c21;
+    font-size: clamp(15px, 2vw, 20px);
+    line-height: 1.25;
+  }
+</style>
+
+<style>
+  #team .team-content {
+    background: linear-gradient(
+      160deg,
+      rgba(15, 23, 42, 0.88),
+      rgba(20, 43, 33, 0.96)
+    );
+  }
+
+  #team .team-content-text {
+    padding: 16px 12px;
+    text-align: center;
+  }
+
+  #team .team-content-text .title {
+    margin: 0 0 10px;
+    color: #fff;
+    font: bold clamp(19px, 2vw, 25px)/1.15 Georgia, serif;
+  }
+
+  #team .team-content-text .title::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    margin: 10px auto 0;
+    background: #c9ffae;
+    border-radius: 2px;
+  }
+
+  #team .team-content-text .post {
+    display: block;
+    color: #f1f5ef;
+    font: normal 14px/1.55 "Segoe UI", Arial, sans-serif;
+  }
+</style>
+
+<style>
+  #blog.skills-section {
+    background: linear-gradient(145deg, #b9beb0, #e2e8db);
+    color: #24382b;
+  }
+
+  #skills-title {
+  max-width: 900px;
+  margin: 0 auto 32px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f7f9f4;
+  color: #0f172a;
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: normal;
+  text-align: center;
+  text-transform: none;
+}
+
+  #blog .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  #blog .skills-card {
+    min-width: 0;
+    padding: clamp(18px, 3vw, 28px);
+    border-radius: 26px;
+    background: #fff;
+    box-shadow: 0 12px 28px rgba(36, 56, 43, 0.13);
+  }
+
+  #blog .skills-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 18px;
+    color: #284234;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  #blog .skills-card h3 i {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    border-radius: 50%;
+    background: #e5efdf;
+  }
+
+  #blog .skills-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  #blog .technical-list li,
+  #blog .soft-list li {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #24382b;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  #blog .technical-list li {
+    padding: 10px 0;
+  }
+
+  #blog .technical-list li + li {
+    border-top: 1px solid #dfe7dc;
+  }
+
+  #blog .skills-expert {
+    display: inline-block;
+    margin-left: 4px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: #385b45;
+    color: #fff;
+    font-size: 12px;
+  }
+
+  #blog .soft-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  #blog .soft-list li {
+    justify-content: center;
+    padding: 10px;
+    border-radius: 22px;
+    background: #eee4d4;
+    text-align: center;
+  }
+
+  @media (max-width: 767px) {
+    #blog .skills-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 380px) {
+    #blog .soft-list {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+	</head>
+
+	<body>
+		<div class="page-wrapper">
+			
+			<!-- PRELOADER -->
+			<div class="atf_preloader">
+				<div class="spinner_wrap">
+					<div class="spinner"></div>
+				</div>
+			</div>
+			<!-- PRELOADER -->
+			
+			<!-- CURSOR BODY START -->
+			<div class="cursor_body">
+				<div class="cursor-in"></div>
+				<div class="cursor-out"></div>
+			</div>		  
+			<!-- CURSOR BODY END -->
+			
+
+			<!-- back to top start -->
+			<div id="back_to_top"><span id="scroll_to_top"></span></div>
+			<!-- back to top end -->
+
+			<!-- Start Hamburger area  -->
+			<div class="atf-hamburger">
+				<div class="atf-hamburger-wrapper">
+					<div class="atf-hamburger-header d-flex justify-content-between align-items-center mb-50">
+						<div class="atf-hamburger-logo">
+						   <a href="index-2.html"><img src="assets/img/logo/logo.png" alt=""></a>
+						</div>
+						<div class="atf-hamburger-close">
+						   <button class="atf-hamburger-close-toggle"><i class="fa fa-times"></i></button>
+						</div>
+					</div>
+				 
+					<div class="atf-hamburger-menu d-block d-xl-none mb-50">
+						<nav></nav>
+					</div>
+				 
+
+					<div class="atf-hamburger-info mb-50">
+						<h3 class="atf-hamburger-sm-title">Your Address</h3>
+						<span><a href="#"><i class="fa-light fa-phone me-2"></i> + 654 8954 2345</a></span>
+						<span><a href="#"><i class="fa-light fa-envelope me-2"></i> info@example.com</a></span>
+						<span><a href="#"><i class="fa-light fa-map-marker-alt me-2"></i> United State, Florida</a></span>
+					</div>
+				 
+					<div class="atf-hamburger-social mb-50">
+						<h3 class="atf-hamburger-sm-title">Follow Me</h3>
+						<a href="#"><i class="fab fa-facebook-f"></i></a>
+						<a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+						<a href="#"><i class="fab fa-linkedin-in"></i></a>
+						<a href="#"><i class="fab fa-instagram"></i></a>
+					</div>
+				</div>
+			</div>
+
+			
+			<div class="atf-hamburger-overlay"></div>
+			<!-- End Hamburger area  -->
+
+			<!-- START HEADER SECTION-->
+			<header class="atf-header-area">
+				<div class="atf-site-header v2 atf-style1 atf-sticky-header fixed-top">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-6 ">
+								<div class="atf-site-logo v2">
+  <a href="index.html">
+    <img src="assets/img/logo/logo-yg.png"
+     alt="Yisel Gallardo"
+     style="width: 56px; max-width: 100%; height: auto;">
+  </a>
+</div>
+							</div>
+							
+							<div class="col-xl-6 d-none d-xl-block">
+								<div class="atf-main-menu landing-page v2 d-flex justify-content-center">
+									<nav class="atf-nav atf-mobile-menu-active">
+									<ul class="atf-nav-list">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="index.html#about">About</a></li>
+  <li><a href="index.html#team">Projects</a></li>
+  <li class="menu-item-children">
+  <a href="gallery.html">Gallery <i class="arrow down" aria-hidden="true"></i></a>
+  <ul class="sub-menu">
+    <li><a href="gallery-details.html">Gallery Details</a></li>
+  </ul>
+</li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
+									</nav>
+								</div>
+							</div><!-- END COL -->
+
+							<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-6">
+								<div class="atf-header-bottom-right d-flex align-items-center justify-content-end">
+									<div class="call-to-action d-none d-lg-block">
+                                       <a href="tel:3336874587">
+                                          <div class="call-to-action-item d-flex align-items-center">
+                                             <span class="call-to-action-icon">
+                                                <i class="fa-light fa-phone-volume"></i>
+                                             </span>
+                                             <div class="call-to-action-text">
+                                                <h6 class="mb-0">Phone</h6>
+                                                <span style="color: #10182b;">+507 6613-9831</span>
+                                             </div>
+                                          </div>
+                                       </a>
+                                    </div>
+									<div class="atf-main-menu-bars d-block d-xl-none">
+										<button class="atf-hamburger-toogle ml-15">
+											<i class="fa fa-bars"></i>
+										</button>
+									</div>
+								</div>
+							</div><!-- END COL -->
+						</div><!-- END ROW -->
+					</div><!-- END CONTAINER -->
+				</div>
+			</header>
+			<!-- END HEADER SECTION-->
+			
+			<main>		
+			
+			<!-- START HERO -->
+			<section class="hero-section d-flex align-items-center">
+				<div class="bg-glow"></div>
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-lg-6 col-md-12 mb-5 mb-lg-0 content-col">
+							<span class="tagline">Welcome</span>
+							<h1 class="hero-title v2 mt-15">
+								YISEL GALLARDO<br>  PORTFOLIO
+							</h1>
+							<p class="hero-desc mt-30">
+								 CREATE WITH PURPUSE. INSPIRE WITH KIDNESS
+							</p>
+							<div class="d-flex flex-wrap gap-3 mt-40 action-buttons atf-hero-btn-v2">
+								
+							</div>
+							<div style="max-width: 460px; margin-top: 48px; padding: 4px 0 4px 20px;
+            border-left: 3px solid #c9ffae; text-align: left;">
+  <p style="margin: 0 0 10px; color: #c9ffae; font-size: 13px;
+            font-weight: 700; letter-spacing: 2px; text-transform: uppercase;">
+    Personal Philosophy
+  </p>
+
+  <blockquote style="margin: 0; padding: 0; border: 0; background: transparent;
+                     color: #fff; font-family: Georgia, serif;
+                     font-size: clamp(20px, 2.1vw, 26px); line-height: 1.45;">
+    “Opportunities are not always found—<strong style="color: #c9ffae; font-weight: 700;"><em>they are built</em></strong>
+    through effort, perseverance, and the courage
+    <em>to take the next step</em>.”
+  </blockquote>
+</div>
+						</div>
+						<div class="col-lg-6 col-md-12 position-relative text-center">
+							<div class="image-wrapper">
+								<div class="holo-frame"></div>
+								<img src="assets/img/bg/Retratoprofesionalconblazer.png.png"
+     alt="Portrait of Yisel Gallardo"
+     class="main-img img-fluid rounded-4 overflow-hidden"
+     style="transform: scale(1.5); transform-origin: center bottom;">
+								<div class="floating-badge badge-top-right">
+									<div class="icon-box"><i class="fa-light fa-microchip"></i></div>
+									<span>	Microsoft & Tech Skills</span>
+								</div>
+								<div class="floating-badge badge-mid-left">
+									<div class="icon-box"><i class="fa-light fa-bolt"></i></div>
+									<span>Always Learning</span>
+								</div>
+								<div class="floating-badge badge-bottom-right">
+									<div class="icon-box"><i class="fa-light fa-bullseye"></i></div>
+									<span>Team Collaboration</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- END HERO -->
+			
+			<!-- START ABOUT DESIGN -->
+			<section id="about" class="atf-about-area-v2 atf-section-padding"
+  style="background: linear-gradient(rgba(239, 247, 231, 0.), rgba(239, 247, 231, 0.94)),
+         url('assets/img/bg/aboutme.png') center 40% / cover no-repeat;">
+				<div class="container p-relative">
+					<!-- Content -->
+					<div class="row align-items-center">
+						<div class="col-xxl-5 col-xl-5 col-lg-6 mb-4 mb-md-0 text-center">
+							<div style="width: 100%; max-width: 480px; margin: 0 auto;">
+  <img
+    src="assets/img/bg/aboutme.png"
+    alt="Yisel Gallardo standing beside a tree"
+    style="display: block; width: 100%; height: auto; border-radius: 32px 0 32px 32px; box-shadow: 0 14px 32px rgba(26, 43, 23, 0.22);"
+  >
+</div>
+						</div>
+						<div class="col-xxl-7 col-xl-7 col-lg-6 mt-lg-40">
+							<div class="atf-section-title style1 mb-20">
+								<span class="sub-title">ABOUT ME</span>
+								<h2 class="title style1 split-content end mb-20">Hello! I’m <span class="highlight">Yisel Gallardo</span> </h2>
+							</div>
+							<p>
+							 I'm a curious, adaptable, and detail-oriented student who enjoys learning, exploring new ideas, and taking on new challenges.
+							</p>
+							<p>
+							 I believe that growth comes from continuous learning, meaningful experiences, and the people we meet along the way.
+
+							</p>
+							
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- END ABOUT DESIGN-->
+			
+					<div class="row">
+						<div class="col-lg-3 col-md-6 wow fadeInLeft" data-wow-duration=".5s" data-wow-delay=".5s">
+							<div class="feature-card mb-25">
+								<div class="atf-feature-icon">
+									<span><i class="fa-light fa-heart"></i></span>
+								</div>
+								<h3 class="atf-feature-title">EMPATHY</h3>
+								<p> value understanding
+and connecting with
+others.</p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".5s">
+							<div class="feature-card mb-25">
+								<div class="atf-feature-icon">
+									<span><i class="fa-light 	fa-clipboard-check"></i></span>
+								</div>
+								<h3 class="atf-feature-title">RESPONSIBILITY</h3>
+								<p>I take ownership
+of my actions and
+commitments.</p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".5s">
+							<div class="feature-card mb-25">
+								<div class="atf-feature-icon">
+									<span><i class="fa-light 	fa-lightbulb"></i></span>
+								</div>
+								<h3 class="atf-feature-title">CREATIVITY</h3>
+								<p>I enjoy turning ideas into meaningful solutions.</p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 wow fadeInRight" data-wow-duration=".5s" data-wow-delay=".5s">
+							<div class="feature-card mb-25">
+								<div class="atf-feature-icon">
+									<span><i class="fa-light fa-handshake"></i></span>
+								</div>
+								<h3 class="atf-feature-title">RESPECT</h3>
+								<p>I treat others with kidness, fairness and appreciation.</p>
+							</div>
+						</div>
+					</div><!-- END ROW -->
+				</div><!--- END CONTAINER -->
+			</section>
+			<!-- END FEATURE -->
+			
+
+			<!-- START GALLERY DESIGN-->
+			<section id="work" class="atf-work-area atf-work-area-plr atf-section-padding">
+				<div class="container-fluid">
+					<div class="row justify-content-center text-center">
+						<div class="col-xxl-8 col-xl-8 col-lg-10">
+							<div class="atf-section-title mb-50">
+								<span class="sub-title">WHAT DEFINES ME</span>
+								<h2 class="title style1 split-content down mb-20">MY<span class="highlight">STRENGTHS</span></h2>
+							</div>
+						</div><!-- END COL -->
+					</div><!-- END ROW -->
+
+					<div class="row justify-content-center g-4">
+  <div class="col-6 col-lg-3">
+    <div class="strength-card">
+      <span class="strength-icon"><i class="fa-light fa-comments" aria-hidden="true"></i></span>
+      <h3>Communication</h3>
+    </div>
+  </div>
+
+  <div class="col-6 col-lg-3">
+    <div class="strength-card">
+      <span class="strength-icon"><i class="fa-light fa-puzzle-piece" aria-hidden="true"></i></span>
+      <h3>Creative Problem Solving</h3>
+    </div>
+  </div>
+
+  <div class="col-6 col-lg-3">
+    <div class="strength-card">
+      <span class="strength-icon"><i class="fa-light fa-magnifying-glass" aria-hidden="true"></i></span>
+      <h3>Attention to Detail</h3>
+    </div>
+  </div>
+
+  <div class="col-6 col-lg-3">
+    <div class="strength-card">
+      <span class="strength-icon"><i class="fa-light fa-clipboard-check" aria-hidden="true"></i></span>
+      <h3>Organization</h3>
+    </div>
+  </div>
+
+  <div class="col-6 col-lg-3">
+    <div class="strength-card">
+      <span class="strength-icon"><i class="fa-light fa-users" aria-hidden="true"></i></span>
+      <h3>Teamwork</h3>
+    </div>
+  </div>
+
+  <div class="col-6 col-lg-3">
+    <div class="strength-card">
+      <span class="strength-icon"><i class="fa-light fa-seedling" aria-hidden="true"></i></span>
+      <h3>Adaptability</h3>
+    </div>
+  </div>
+</div>
+				</div>
+			</section>
+			<!-- END GALLERY DESIGN-->
+
+			
+			<!-- choose area start --><section id="choose" class="atf-section-padding" style="background: #f4f7f2;">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <div class="atf-section-title style1 mb-4">
+          <span class="sub-title">MY JOURNEY</span>
+          <h2 class="title style1" style="font-size: clamp(28px, 4vw, 46px);">
+          My Education<br>
+<span style="display: inline-block; background: #c9ffae; color: #0f172a; padding: 0 10px 3px; border-radius: 10px;">&amp; Certifications</span>
+          </h2>
+        </div>
+
+        <div class="bg-white rounded-4 shadow-sm p-4 mb-3">
+          <h3 class="h5 fw-bold mb-2">
+            <i class="fa-light fa-graduation-cap me-2" aria-hidden="true"></i>Education
+          </h3>
+          <p class="mb-0">
+            <strong>High School Student</strong><br>
+            Science Program · Panama<br>
+            Expected Graduation: 2026
+          </p>
+        </div>
+
+        <div class="bg-white rounded-4 shadow-sm p-4">
+          <h3 class="h5 fw-bold mb-3">
+            <i class="fa-light fa-award me-2" aria-hidden="true"></i>Certifications
+          </h3>
+          <ul class="list-unstyled mb-0">
+            <li class="pb-2 mb-2 border-bottom">Microsoft Excel 365</li>
+            <li class="pb-2 mb-2 border-bottom">Microsoft Excel Expert</li>
+            <li class="pb-2 mb-2 border-bottom">Python · Cisco Networking Academy</li>
+            <li>
+              <strong>TOEIC</strong><br>
+              Speaking &amp; Writing · Listening &amp; Reading
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="position-relative mx-auto rounded-4 overflow-hidden shadow-sm"
+             style="max-width: 430px; background: #dcebd8;">
+          <img src="assets/img/bg/my-journey.png"
+               alt="Portrait of Yisel Gallardo"
+               style="display: block; width: 100%; height: auto;">
+
+          <div class="position-absolute bottom-0 start-0 end-0 p-3 d-flex flex-wrap justify-content-center gap-2"
+               style="background: linear-gradient(transparent, rgba(17, 40, 27, 0.8));">
+            <span class="bg-white rounded-pill px-3 py-2 fw-bold" style="color: #107c41;">
+              <img src="assets/img/bg/excel-logo.png" alt="" width="20" class="me-1"> Excel
+            </span>
+            <span class="bg-white rounded-pill px-3 py-2 fw-bold" style="color: #285740;">
+              <i class="fa-brands fa-python me-1" aria-hidden="true"></i>Python
+            </span>
+            <span class="bg-white rounded-pill px-3 py-2 fw-bold" style="color: #285740;">
+              <i class="fa-light fa-headphones me-1" aria-hidden="true"></i>TOEIC
+            </span>
+          </div>
+        </div>
+		<div class="mx-auto mt-4 p-3 bg-white rounded-4 shadow-sm" style="max-width: 430px;">
+  <h3 class="h5 fw-bold mb-3">My Education Timeline</h3>
+
+  <ul class="list-unstyled mb-0 ps-3" style="border-left: 3px solid #a9da99;">
+    <li class="mb-3">
+      <strong style="color: #285740;">2013–2026</strong><br>
+      C.E.F.I Guillermo Endara Galimany
+    </li>
+    <li>
+      <strong style="color: #285740;">2024–2026</strong><br>
+      ¡Supérate! Motta La Chorrera Program
+    </li>
+  </ul>
+</div>
+      </div>
+    </div>
+  </div>
+</section>
+			<!-- choose area start -->
+			
+			<!-- Team Photo -->
+			 <div style="background: #000; padding: 40px 16px;">
+  <video controls playsinline preload="none"
+         poster="assets/img/team/portada-video.png.png"
+         style="display: block; width: 100%; max-width: 960px;
+                aspect-ratio: 16 / 9; margin: 0 auto;
+                border-radius: 20px; object-fit: contain;">
+    <source src="assets/img/team/mi-video.mp4.mp4" type="video/mp4">
+  </video>
+</div>
+			<!-- Team Photo -->
+			
+			<!-- START TEAM -->
+			<section id="team" class="atf-team-area pt-120 pb-90 p-relative atf-cover-bg"
+  style="background: linear-gradient(rgba(245, 250, 242, 0.88), rgba(245, 250, 242, 0.88)),
+         url('assets/img/bg/fondo-proyectos.png') center / cover no-repeat;">
+
+				<div class="container">
+					<div class="row justify-content-center text-center">
+						<div class="col-xxl-8 col-xl-8 col-lg-10">
+							<div class="atf-section-title mb-50">
+								<span class="sub-title">ACADEMIC PROJECTS</span>
+
+								<blockquote style="max-width: 680px; margin: 18px auto 0; padding: 0 12px;
+                   border: 0; background: transparent; color: #233a2a;
+                   font: italic clamp(23px, 3vw, 34px)/1.4 Georgia, serif;">
+  “School projects, events, and presentations have helped me
+  <strong style="color: #285740;">learn in different ways.</strong>”
+</blockquote>
+							</div>
+						</div><!--- END COL -->
+					</div>
+					
+					<div class="row">
+						<div class="col-lg-3 col-md-6 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">
+							<div class="atf-team-item mb-25">
+								<div class="atf-team-thumb">
+									<img src="assets/img/team/img1.png" alt="">
+								</div>
+								<div class="team-content">
+									<div class="team-social-icon">
+										
+									</div>
+									<a href="gallery.html#gallery">
+  <div class="team-content-text">
+    <h3 class="title" style="font-family: 'Poppins', Arial, sans-serif; font-weight: 700;">Supérate Program</h3>
+											<span class="post">Built leadership, adaptability, and collaboration through challenging academic projects.</span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+				 
+						<div class="col-lg-3 col-md-6 col-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s" data-wow-offset="0">
+							<div class="atf-team-item mb-25">
+								<div class="atf-team-thumb">
+									<img src="assets/img/team/img2.png" alt="">
+								</div>
+								<div class="team-content">
+									<div class="team-social-icon">
+							
+									</div>
+									<a href="gallery.html#culture-carousel">
+  <div class="team-content-text">
+    <h3 class="title" style="font-family: 'Poppins', Arial, sans-serif; font-weight: 700;">School Fairs &amp; Exhibitions</h3>
+											<span class="post">Developed, organized, and presented projects while strengthening teamwork and communication.</span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-12 col-12 wow fadeIn" data-wow-duration="3s" data-wow-delay="0.4s" data-wow-offset="0">
+							<div class="atf-team-item mb-25">
+								<div class="atf-team-thumb">
+									<img src="assets/img/team/img3.png" alt="">
+								</div>
+								<div class="team-content">
+									<div class="team-social-icon">
+									
+									</div>
+									<a href="gallery.html#hydronexis-carousel">
+  <div class="team-content-text">
+    <h3 class="title" style="font-family: 'Poppins', Arial, sans-serif; font-weight: 700;">HYDRONEXIS</h3>
+											<span class="post">Designed a sustainable hydroponic solution by combining research, innovation, and entrepreneurship.</span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+				 
+						<div class="col-lg-3 col-md-6 col-12 wow fadeIn" data-wow-duration="4s" data-wow-delay="0.5s" data-wow-offset="0">
+							<div class="atf-team-item mb-25">
+								<div class="atf-team-thumb">
+									<img src="assets/img/team/team-31.png" alt="">
+								</div>
+								<div class="team-content">
+									<div class="team-social-icon">
+									
+									</div>
+									<a href="gallery-details.html#expotech-speaker">
+  <div class="team-content-text">
+    <h3 class="title" style="font-family: 'Poppins', Arial, sans-serif; font-weight: 700;">EXPOTECH Project Speaker</h3>
+											<span class="post">I gained public speaking experience and learned to explain our ideas clearly to an audience.</span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div><!-- END ROW -->
+				</div><!--- END CONTAINER -->
+			</section>
+			<!-- END TEAM -->
+			
+			
+			<!-- Cta area start -->
+
+			<section class="atf-cta-area atf-section-padding black-bg"
+  style="background: linear-gradient(#0009, #0009), url('assets/img/team/practicajpg.jpg') center / cover no-repeat;">
+				<div class="left-glow"></div>
+				<div class="right-dots"></div>
+				<div class="blur-circle"></div>
+				<div class="container">
+					<div class="row  justify-content-center text-center">
+						<div class="col-md-8">
+							<div class="atf-section-title style1">
+								<h2 class="title style1 split-content start mb-30 text-white">PROFESSIONAL EXPERIENCE<span class="highlight">Human Resources Summer Intern</span>Grupo TLA Panamá</h2>
+								<p>
+ <span style="display: inline-block; background-color: #c9ffae; color: #111827; padding: 5px 16px; border-radius: 999px; font-size: 15px; font-weight: 600; margin-bottom: 6px;">
+  December 2025 – January 2026
+</span><br>
+
+  <strong style="display: inline-block; margin-top: 12px; font-size: 22px; font-weight: 700; color: #fff;">
+    Responsibilities
+  </strong><br>
+  Internal communication, documentation management, and recruitment assistance<br>
+
+  <strong style="display: inline-block; margin-top: 12px; font-size: 22px; font-weight: 700; color: #fff;">
+    What I Learned
+  </strong><br>
+  Strengthened my professionalism, organization, communication, and attention to detail.
+</p>
+								
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Cta area end -->
+
+			<!-- START CLIENT -->
+			<section id="client" class="atf-section-padding"
+  style="background: linear-gradient(rgba(244, 249, 241, 0.88), rgba(244, 249, 241, 0.88)),
+         url('assets/img/bg/_techo-fondo.png') center / cover no-repeat;">
+  <div class="container">
+    <div class="row align-items-center g-4">
+
+      <div class="col-lg-5">
+        <div class="atf-section-title style1">
+          <span class="sub-title">VOLUNTEERING</span>
+
+          <h2 class="title style1 mb-3">
+            Volunteering with
+            <span style="display: inline-block; background: #c9ffae; color: #0f172a;
+                         padding: 0 10px; border-radius: 10px;">TECHO</span>
+          </h2>
+        </div>
+
+        <p style="margin: 0; padding-left: 16px; border-left: 3px solid #76a66c;
+                  color: #233a2a; font: italic clamp(19px, 2vw, 24px)/1.55 Georgia, serif;">
+          “Volunteering with TECHO taught me the value of
+          <strong>empathy, commitment,</strong> and the positive impact
+          that small actions can have on a community.”
+        </p>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <img src="assets/img/bg/techo-1.png"
+                 alt="My volunteering experience with TECHO"
+                 loading="lazy"
+                 style="display: block; width: 100%; aspect-ratio: 4 / 5;
+                        object-fit: cover; border-radius: 22px;">
+          </div>
+
+          <div class="col-sm-6">
+            <img src="assets/img/bg/techo-2.png"
+                 alt="A moment from my volunteer work with TECHO"
+                 loading="lazy"
+                 style="display: block; width: 100%; aspect-ratio: 4 / 5;
+                        object-fit: cover; border-radius: 22px;">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+			<!-- END CLIENT -->
+			
+			
+			<!-- START BLOG -->
+			<section id="blog" class="atf-section-padding skills-section"
+         aria-labelledby="skills-title">
+  <div class="container">
+   <h2 id="skills-title" class="title style1">
+  SKILLS THAT <span style="display: inline-block; background: #c9ffae;
+    padding: 0 10px; border-radius: 10px;">DEFINE ME <MEta:redirect></MEta:redirect></span>
+</h2>
+
+    <div class="skills-grid">
+      <div class="skills-card">
+        <h3>
+          <i class="fa-light fa-laptop" aria-hidden="true"></i>
+          Technical Skills
+        </h3>
+
+        <ul class="technical-list">
+          <li>
+            <i class="fa-light fa-table-cells" aria-hidden="true"></i>
+            <span>Microsoft Excel <strong class="skills-expert">Expert</strong></span>
+          </li>
+          <li><i class="fa-light fa-table-cells" aria-hidden="true"></i> Microsoft Excel 365</li>
+          <li><i class="fa-light fa-file-powerpoint" aria-hidden="true"></i> Microsoft PowerPoint</li>
+          <li><i class="fa-light fa-palette" aria-hidden="true"></i> Canva</li>
+          <li><i class="fa-light fa-wand-magic-sparkles" aria-hidden="true"></i> Alight Motion</li>
+          <li><i class="fa-light fa-film" aria-hidden="true"></i> CapCut</li>
+          <li><i class="fa-light fa-display" aria-hidden="true"></i> Presentation Design</li>
+        </ul>
+      </div>
+
+      <div class="skills-card">
+        <h3>
+          <i class="fa-light fa-users" aria-hidden="true"></i>
+          Soft Skills
+        </h3>
+
+        <ul class="soft-list">
+          <li><i class="fa-light fa-users" aria-hidden="true"></i> Teamwork</li>
+          <li><i class="fa-light fa-comments" aria-hidden="true"></i> Communication</li>
+          <li><i class="fa-light fa-puzzle-piece" aria-hidden="true"></i> Problem Solving</li>
+          <li><i class="fa-light fa-seedling" aria-hidden="true"></i> Adaptability</li>
+          <li><i class="fa-light fa-list-check" aria-hidden="true"></i> Organization</li>
+          <li><i class="fa-light fa-heart" aria-hidden="true"></i> Empathy</li>
+          <li><i class="fa-light fa-clock" aria-hidden="true"></i> Time Management</li>
+          <li><i class="fa-light fa-clipboard-check" aria-hidden="true"></i> Responsibility</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+			<!-- END BLOG -->
+			
+			<!-- START CONTACT -->
+			<section id="contact" class="atf-contact-area atf-cover-bg p-relative atf-section-padding">
+  <div class="container">
+    <div class="row align-items-center g-4">
+
+      <div class="col-lg-6">
+        <div class="atf-contact-info">
+
+          <div class="atf-contact-details d-flex align-items-center justify-content-between gap-3">
+            <div class="atf-contact-address">
+              <h4>Location</h4>
+              <p>Panamá Oeste, Panamá</p>
+            </div>
+            <div class="atf-contact-icon" aria-hidden="true">
+              <i class="fa-light fa-location"></i>
+            </div>
+          </div>
+
+          <div class="atf-contact-details d-flex align-items-center justify-content-between gap-3">
+            <div class="atf-contact-address" style="min-width: 0; overflow-wrap: anywhere;">
+              <h4>Email</h4>
+              <p>
+                <a href="mailto:yisel.gallardo2026@mottach.superate.org">
+                  yisel.gallardo2026@mottach.superate.org
+                </a>
+              </p>
+              <p>
+                <a href="mailto:yiselalanisgallardolezcano@gmail.com">
+                  yiselalanisgallardolezcano@gmail.com
+                </a>
+              </p>
+            </div>
+            <div class="atf-contact-icon flex-shrink-0" aria-hidden="true">
+              <i class="fa-light fa-envelope"></i>
+            </div>
+          </div>
+
+          <div class="atf-contact-details d-flex align-items-center justify-content-between gap-3">
+            <div class="atf-contact-address">
+              <h4>Phone &amp; WhatsApp</h4>
+              <p><a href="tel:+50766139831">+507 6613-9831</a></p>
+            </div>
+            <div class="atf-contact-icon" aria-hidden="true">
+              <i class="fa-light fa-phone-volume"></i>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6 ps-lg-5">
+        <div class="atf-section-title style1 mb-4">
+          <span class="sub-title">CONTACT</span>
+          <h2 class="title style1">
+            Let’s <span style="background: #c9ffae; color: #0f172a;
+                              padding: 0 10px; border-radius: 10px;">Connect</span>
+          </h2>
+        </div>
+
+        <div class="d-flex flex-wrap gap-3">
+          <a class="atf-themes-btn" href="mailto:yiselalanisgallardolezcano@gmail.com">
+            <i class="fa-light fa-envelope me-2" aria-hidden="true"></i>Email Me
+          </a>
+
+          <a class="atf-themes-btn" href="https://wa.me/50766139831"
+             target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp me-2" aria-hidden="true"></i>WhatsApp
+          </a>
+
+          <a class="atf-themes-btn"
+             href="https://www.linkedin.com/in/yisel-alanis-gallardo-lezcano-a136a3409"
+             target="_blank" rel="noopener">
+            <i class="fa-brands fa-linkedin me-2" aria-hidden="true"></i>Yisel Gallardo on LinkedIn
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+			<!-- END CONTACT -->
+			
+		</main>
+		
+			<!-- Footer Section -->
+			<footer style="background: #111827; padding: 56px 20px; text-align: center; color: #fff;">
+  <div class="container">
+    <p style="margin: 0 0 8px; color: #c9ffae; font-size: 26px; font-weight: 700;">
+      Yisel Gallardo
+    </p>
+    <p style="margin: 0; color: #d1d5db;">
+      Panamá Oeste, Panamá
+    </p>
+    <p style="margin: 6px 0 0; color: #d1d5db;">
+      +507 6613-9831
+    </p>
+
+    <p style="max-width: 560px; margin: 24px auto 0; padding-top: 20px;
+              border-top: 1px solid #536253; color: #fff;
+              font: italic 21px/1.5 Georgia, serif;">
+      “I’m proud of what I’ve learned and excited to see what I’ll do with it.”
+    </p>
+  </div>
+</footer>
+			<!-- End Footer Section -->
+		</div>
+
+		<!-- Latest jQuery -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/bootstrap.bundle.min.js"></script>
+		<script src="assets/js/plugin.min.js"></script>
+		<script src="assets/js/gsap.js"></script>
+		<script src="assets/js/form-contact.js"></script>
+		<script src="assets/js/script.js"></script>
+		
+	</body>
+
+<!-- Mirrored from https://smart-iota-mocha.vercel.app/ by HTTrack Website Copier/3.x [XR&CO], Mon, 09 Nov 2026 21:47:10 GMT -->
+</html>
